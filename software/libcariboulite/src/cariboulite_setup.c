@@ -431,7 +431,7 @@ int cariboulite_self_test(cariboulite_st* sys, cariboulite_self_test_result_st* 
     
     uint8_t modem_pn = 0, modem_vn = 0;
     at86rf215_get_versions(&sys->modem, &modem_pn, &modem_vn);
-    if (modem_pn != 0x34)
+    if (modem_pn != 0x34 && modem_pn != 0x35)
     {
         ZF_LOGE("The assembled modem is not AT86RF215 (product number: 0x%02x)", modem_pn);
         res->modem_fail = 1;
