@@ -8,13 +8,6 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 ERROR="0"
 
-# update the git repo on develop_R1 branch to include sub-modules
-printf "\n[  1  ] ${GREEN}CaribouLite Git Repo${NC}\n"
-git checkout develop_R1
-git pull
-git submodule init
-git submodule update
-
 # clone SoapySDR dependencies
 printf "\n[  2  ] ${GREEN}Checking Soapy SDR installation ($SOAPY_UTILS_EXE)...${NC}\n"
 
